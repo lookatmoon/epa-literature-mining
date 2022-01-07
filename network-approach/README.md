@@ -4,7 +4,7 @@ For the construction of graph: run graph_construction.py.
 
 For training and testing classifier, run network_based_LR.py.
 
-Constructed graph and pretrained word embeddings: see graph.gml and emb.txt.
+Constructed graph and pretrained word embeddings: see union.gml and emb.txt.
 
 ## Some tools used in this pipeline:
 
