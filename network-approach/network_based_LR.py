@@ -19,8 +19,10 @@ from random import choice
 
 # Extract feature given a list of words
 def feature_ext(x):
+    # load pretained word embeddings
     nodevec = Word2Vec.load("union_emb.txt")
     feats = []
+    # check if an article holds a PMID, if not, assign a zero vector
     for i in x:
         try:
             feats.append([i, nodevec.wv[str(i)]])
@@ -47,11 +49,13 @@ x_train,y_train = labeling('2013_all.csv','2013_cited.csv')
 x_test,y_test = labeling('2020_all.csv','2020_cited.csv')
 x_train_feat, x_test_feat = [i[1] for i in feature_ext(x_train)],  [i[1] for i in feature_ext(x_test)]
 test_data = list(zip(x_test_feat,y_test))
-# train the classfier
+# train the classfier, use logistic regression as the basic classifier
 LR = LogisticRegression()
 LR.fit(x_train_feat,y_train)
 
 
+
+# iterative training function 
 def iteration(LR,pre_x, pre_y, dataset):
     batch_size = 50
     x_feat, y =  [i[0] for i in dataset], [i[1] for i in dataset]
