@@ -1,4 +1,4 @@
-# Network-based approach
+# Network-based Approach
 
 For the construction of graph: run graph_construction.py.
 
