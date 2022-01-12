@@ -85,25 +85,15 @@ for i in range(0,len(test_Y_hat)):
 def merge(list1, list2, list3, list4):
     merged_list = []
     for i in range(max((len(list1), len(list2),len(list3),len(list4)))):
-        # while True:
-        #     try:
       tup = (list1[i], list2[i], list3[i],list4[i])
-            # except IndexError:
-            #     if len(list3) > len(list2):
-            #         list2.append('')
-            #         tup = (list1[i], list2[i],list3[i],list4[i])
-            #     elif len(list3) < len(list2):
-            #         list3.append('')
-            #         tup = (list1[i], list2[i],list3[i],list4[i])
-            #     continue
       merged_list.append(tup)
-            # break
     return merged_list
 
 #create list of tuples and sort
 merged_list = merge(s2020['REFERENCE_ID'],s2020['PMID'],s2020['CITED'],prob)
 merged_list.sort(key=lambda y: y[3],reverse=True)
 print(merged_list[0:10])
+# output merged_list and get text_based_score.csv in this folder
 
 """#Calculate Recall"""
 
@@ -149,10 +139,10 @@ per_95=x[0]*num
 y = [i for i in range(len(y_axis)) if y_axis[i] > 0.90]
 per_90=y[0]*num
 
+#make a plot
 figure = plt.figure() 
 axes1 = figure.add_subplot(1,1,1)  
 axes1.plot(x_axis,y_axis) 
-# plt.title('As a whole')
 plt.scatter([per_95],[0.95],s=25,c='r') 
 plt.plot([0,per_95],[0.95,0.95],c='b',linestyle='--')
 plt.plot([per_95,per_95],[0,0.95],c='b',linestyle='--')
@@ -172,6 +162,7 @@ figure.show()
 
 """#Making it iterative"""
 
+# n: batch size; iter: the number of iterations to go through
 n=100
 iter=20
 index_list=[0]
