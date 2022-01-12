@@ -10,6 +10,8 @@
 import numpy as np
 def recall_at_k_curve_data(filepath,pmid_only,num):
   #filepath is a list
+  #pmid_only specifies whether we only count the articles with PMIDs or not
+  #num is the number of articles to go through for each calculation of recall (suggested value: 1000)
   pair = []
   filepath.sort(key=lambda y: y[3],reverse=True)
   if pmid_only == True:
