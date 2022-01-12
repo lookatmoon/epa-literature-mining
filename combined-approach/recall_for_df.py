@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+# Note: the filepath input must be in the desired format: 
+# (combined_result.csv can be an example)
+# first column: hero_id/reference_id
+# second column: PMID
+# third column: Label (boolean value) (actual value of being cited)
+# fourth column: Score (predicted probability of being cited)
 
 def recall_at_k_curve_data(filepath,pmid_only,num):
   #when filepath is a data frame
