@@ -47,7 +47,6 @@ triple_df = triple_df.sort_values(by = ['ave_rank'], ascending=True).reset_index
 label = triple_df['Label'].tolist()
 fake_label = [1 for i in label if i == 1] + [0 for i in label if i == 0]
 triple_df['fake_label'] = pd.Series(fake_label).reset_index(drop=True)
-triple_df.to_csv('triple.csv')
 
 
 # use xgboost to do the basic classification, as it is capable of handling missing value
