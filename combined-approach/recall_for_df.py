@@ -12,19 +12,19 @@ def recall_at_k_curve_data(filepath,pmid_only,num):
   #pmid_only specifies whether we only count the articles with PMIDs or not
   #num is the number of articles to go through for each calculation of recall (suggested value: 1000)
   pair = []
-  filepath.sort_values(by='Score', ascending=False)  
+  filepath_sorted = filepath.sort_values(by='Score', ascending=False,ignore_index = True)   
   if pmid_only == True:
-    filepath=filepath.loc[filepath.PMID.notnull()]
-    filepath=filepath.reset_index(drop=True)
-    #filepath=filepath.drop(filepath[filepath['PMID'].notnull()].index,inplace=True)
-  for i in range(1,len(filepath),num):
+    filepath_sorted=filepath_sorted.loc[filepath.PMID.notnull()]
+    filepath_sorted=filepath_sorted.reset_index(drop=True)
+    #filepath_sorted=filepath_sorted.drop(filepath_sorted[filepath_sorted['PMID'].notnull()].index,inplace=True)
+  for i in range(1,len(filepath_sorted),num):
     tp = 0
     fn = 0
     for j in range(0,i):
-      if filepath['Label'][j] == 1:
+      if filepath_sorted['Label'][j] == 1:
         tp += 1
-    for k in range(i+1,len(filepath)):
-      if filepath['Label'][k] == 1:
+    for k in range(i+1,len(filepath_sorted)):
+      if filepath_sorted['Label'][k] == 1:
         fn += 1
     pair.append((i,tp/(tp+fn)))
   return pair
