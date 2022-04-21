@@ -1,8 +1,15 @@
 # Text-based Approach
 
-For data exploration process (in which we count the most frequent unigrams/bigrams and perform topic modeling): run data_exploration.py.
+In the data exploration process,
+    we count the most frequent unigrams/bigrams in the 2013/2020 titles and abstracts and perform topic modeling).
+    Please run data_exploration.py.
 
-For training and testing classifier, run text_based_LR.py.
+In the training process,
+    we extract textual features and train the classifier.
+    Please run text_based_LR.py.
+    
+In the fine grained method:
+    We divide the training set by chpaters and train separately.
 
 ## Some tools used in this pipeline:
 
