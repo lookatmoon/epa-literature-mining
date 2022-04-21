@@ -58,7 +58,6 @@ def construct_feature_matrix(df, vectorizer):
   
     # here the dimensionality of X is len(df) x |V|
     X = vectorizer.transform(abstract)
-    # T = scipy.sparse.hstack([X,Y,Z])
     
 
     return X
@@ -92,7 +91,6 @@ def merge(list1, list2, list3, list4):
 #create list of tuples and sort
 merged_list = merge(s2020['REFERENCE_ID'],s2020['PMID'],s2020['CITED'],prob)
 merged_list.sort(key=lambda y: y[3],reverse=True)
-print(merged_list[0:10])
 # output merged_list and get text_based_score.csv in this folder
 
 """#Calculate Recall"""
@@ -212,13 +210,9 @@ for j in range(1,iter):
 figure = plt.figure() 
 axes1 = figure.add_subplot(1,1,1)  
 axes1.plot(index_list,percentile_list) 
-# plt.title('As a whole')
-# plt.scatter([94001],[0.95],s=25,c='r') 
-# plt.plot([0,1900],[0.5,0.5],c='b',linestyle='--')
 ax = plt.gca()
 ax.spines['top'].set_color('none')
 ax.spines['right'].set_color('none')
 ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
-# ax.set_ylim(ymin=0,ymax=1)
 figure.show()
