@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 
 """#File import"""
 
-#the file s2020 is available here: https://drive.google.com/drive/folders/1wkQN4_byG8uVf6AduA8nsC3QHN5ZOXH6?usp=sharing
+#the files s2013 and s2020 are available here: https://drive.google.com/drive/folders/1wkQN4_byG8uVf6AduA8nsC3QHN5ZOXH6?usp=sharing
 import csv
 filepath = './s2013.csv'
 s2013 = pd.read_csv(filepath,engine='python')
