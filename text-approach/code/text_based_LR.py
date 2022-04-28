@@ -45,6 +45,7 @@ s2020 = pd.read_csv(filepath_2,engine='python',error_bad_lines=False)
 
 #text vectorizer
 vectorizer = TfidfVectorizer(stop_words = None, ngram_range = (1,3)).fit(s2013['ABSTRACT'].values.astype('U'))
+vectorizer2 = TfidfVectorizer(stop_words = None, ngram_range = (1,3)).fit(s2013['TITLE'].values.astype('U'))
 
 # construct sparse feature matrix
 # params:
@@ -53,32 +54,33 @@ vectorizer = TfidfVectorizer(stop_words = None, ngram_range = (1,3)).fit(s2013['
 # return:
 #     M: a sparse feature matrix that represents df's textual information (used by a predictive model)
 
-def construct_feature_matrix(df, vectorizer):
+def construct_feature_matrix(df, vectorizer, vectorizer2):
     abstract = df['ABSTRACT'].apply(lambda x: np.str_(x)).tolist()
+    title = df['TITLE'].apply(lambda x: np.str_(x)).tolist()
   
     # here the dimensionality of X is len(df) x |V|
     X = vectorizer.transform(abstract)
-    
+    Y = vectorizer2.transform(title)
+    Z = scipy.sparse.hstack([X,Y])
+   
+    return Z
 
-    return X
-
+s2020.rename(columns = {'Abstract':'ABSTRACT'}, inplace = True)
 train_Y = s2013['CITED']
-train_X = construct_feature_matrix(s2013, vectorizer)
+train_X = construct_feature_matrix(s2013, vectorizer,vectorizer2)
 print(train_X.shape)
-test_X = construct_feature_matrix(s2020, vectorizer)
+test_X = construct_feature_matrix(s2020, vectorizer, vectorizer2)
 print(test_X.shape)
 
 #use logistic regression as the classifier and train the model
-model = LogisticRegression(penalty='l2').fit(train_X, train_Y)
+model = LogisticRegression(penalty='l2',class_weight = 'balanced').fit(train_X, train_Y)
 test_Y_hat = model.predict_proba(test_X)
 
 test_Y_hat
 
 prob=[]
-# index=[]
 for i in range(0,len(test_Y_hat)):
   prob.append(test_Y_hat[i][1])
-#   index.append(i)
 
 #a function to merge lists
 def merge(list1, list2, list3, list4):
