@@ -9,7 +9,7 @@ In the training process,
     Please run text_based_LR.py.
     
 In the fine grained method:
-    We divide the training set by chpaters and train separately.
+    We divide the training set into 16 portions by chapters (or groups of sections) and train these independent models separately.
 
 ## Some tools used in this pipeline:
 
