@@ -157,7 +157,7 @@ figure.show()
 """#Active Learning"""
 
 n=100
-iter=5
+iter=20
 index_list=[0]
 percentile_list=[initial]
 for j in range(1,iter):
