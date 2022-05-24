@@ -172,7 +172,7 @@ for j in range(1,iter):
   uncertain_sampled = random.sample(uncertain,n)
 
 
-  #random sample (to do this, uncomment this section and comment the section below)
+  #random sample (to do this, uncomment this section and comment the section above)
   # uncertain=[]
   # for i in range(0,len(merged_list)):
   #   uncertain.append(merged_list[i][0])
