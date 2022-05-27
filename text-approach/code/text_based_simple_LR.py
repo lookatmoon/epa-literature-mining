@@ -88,6 +88,10 @@ def merge(list1, list2, list3, list4):
 #create list of tuples and sort
 merged_list = merge(s2020['REFERENCE_ID'],s2020['PMID'],s2020['CITED'],prob)
 merged_list.sort(key=lambda y: y[3],reverse=True)
+#this is the result of simple text-based method
+df = pd.DataFrame(merged_list, index=None)  
+df.columns = ['REFERENCE_ID', 'PMID', 'Label', 'Score']
+df.to_csv('result.csv') 
 
 """#Calculate Recall"""
 
@@ -219,3 +223,7 @@ for j in range(1,iter):
   percentile=x[0]/len(y_axis)
   percentile_list.append(percentile)
   index_list.append(j*n)
+  
+  #this is the result of active learning without knowledge transfer
+  pl = pd.DataFrame(percentile_list) 
+  pl.to_csv('percentile_list.csv')
