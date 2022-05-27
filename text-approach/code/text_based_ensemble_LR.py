@@ -596,4 +596,5 @@ all = pd.DataFrame(merged_list)
 all.to_csv('merged_list_all.csv',index = False)
 
 #next step: 1. take the max of all the scores for each article, and use that as the final score
-#2. sort the articles based on the fianl score and calculate recall
+#2. sort the articles based on the final score and calculate recall
+#3. format the results and use only the four columns ['REFERENCE_ID', 'PMID', 'Label', 'Score']
