@@ -91,7 +91,7 @@ merged_list.sort(key=lambda y: y[3],reverse=True)
 #this is the result of simple text-based method
 df = pd.DataFrame(merged_list, index=None)  
 df.columns = ['REFERENCE_ID', 'PMID', 'Label', 'Score']
-df.to_csv('result.csv') 
+df.to_csv('result.csv',index = False) 
 
 """#Calculate Recall"""
 
@@ -226,4 +226,4 @@ for j in range(1,iter):
   
   #this is the result of active learning without knowledge transfer
   pl = pd.DataFrame(percentile_list) 
-  pl.to_csv('percentile_list.csv')
+  pl.to_csv('percentile_list.csv',index = False)
