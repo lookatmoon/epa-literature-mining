@@ -8,6 +8,7 @@ Created on Sun Dec  5 02:18:36 2021
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 
 # font size of plot
 matplotlib.rcParams.update({'font.size':13})
@@ -95,4 +96,3 @@ plt.xlim((0,100))
 plt.ylim((0,100))
 plt.tight_layout()
 plt.show()
-plt.savefig('D:/EPA/Data and Code from EPA/notebooks/Combination.pdf')
