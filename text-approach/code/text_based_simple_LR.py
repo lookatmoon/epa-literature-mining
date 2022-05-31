@@ -195,8 +195,8 @@ for j in range(1,iter):
       if s2020['REFERENCE_ID'][j] == uncertain_sampled[i]:
         s2013=s2013.append(s2020.iloc[j])
 
-  vectorizer = TfidfVectorizer(stop_words = None, ngram_range = (1,3)).fit(s2013['ABSTRACT'].values.astype('U'))
-  vectorizer2 = TfidfVectorizer(stop_words = None, ngram_range = (1,3)).fit(s2013['TITLE'].values.astype('U'))
+  vectorizer = TfidfVectorizer(stop_words = None, ngram_range=(1,3)).fit(s2013['ABSTRACT'].values.astype('U'))
+  vectorizer2 = TfidfVectorizer(stop_words = None, ngram_range=(1,3)).fit(s2013['TITLE'].values.astype('U'))
 
   train_Y = s2013['CITED']
   train_X = construct_feature_matrix(s2013, vectorizer,vectorizer2)
