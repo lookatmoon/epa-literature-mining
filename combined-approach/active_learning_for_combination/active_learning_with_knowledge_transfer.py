@@ -177,7 +177,7 @@ for j in range(0,iter):
     if combined_df['Label_y'][i] == 0 or combined_df['Label_y'][i] == 1:
       combined_df['fake_label'][i] = combined_df['Label_y'][i]
   combined_df.drop('Label_y', inplace=True, axis=1)
-  combined_df.rename(columns = {'Label_x':'Label'}, inplace = True)
+  combined_df.rename(columns={'Label_x':'Label'}, inplace = True)
   
 
   #train
