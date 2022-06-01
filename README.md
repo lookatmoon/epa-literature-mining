@@ -15,16 +15,16 @@ Data for network based approach can be found here:
 https://ils.unc.edu/~wangyue/isa-dataset/isa-data/reference_metadata_2020.csv
 
 # Methods and ranker generator
-Text-based Simple Ranker
-text_based_simple_LR.py
-Text-based Ensemble Ranker
-text_based_ensemble_LR.py
-Network-based Ranker.
-network_based_LR.py
-Context Paragraph-based Ranker
+Text-based Simple Ranker : text_based_simple_LR.py 
 
-Combined Ranker
-combined_approach.py
+Text-based Ensemble Ranker : text_based_ensemble_LR.py
+
+Network-based Ranker : graph.py then network_based_LR.py
+
+Context Paragraph-based Ranker: metric_prep.py then metric_learning_train.py then metric_scoring.py
+
+
+Combined Ranker : combined_approach.py
 
 # Graph generator for all methods
 combined_approach.py
