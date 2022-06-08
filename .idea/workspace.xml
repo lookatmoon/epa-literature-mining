@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f634032-7df3-46e7-b21c-7f7e14cd7923" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/combined-approach/data/combined_approach.py" beforeDir="false" afterPath="$PROJECT_DIR$/combined-approach/data/combined_approach.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +29,16 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.network_based_LR">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/combined-approach/data" />
+      <recent name="$PROJECT_DIR$/combined-approach/code" />
+      <recent name="$PROJECT_DIR$/metric_learning/code" />
+      <recent name="$PROJECT_DIR$/network-approach/code" />
+      <recent name="$PROJECT_DIR$/text-approach/output_data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.combined_approach">
     <configuration name="combined_approach" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="epa-literature-mining" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -42,7 +51,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/combined-approach/combined_approach.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/combined-approach/code/combined_approach.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +93,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network-approach/network_based_LR.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network-approach/code/network_based_LR.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,10 +125,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.combined_approach" />
         <item itemvalue="Python.network_based_LR" />
         <item itemvalue="Python.text_based_simple_LR" />
         <item itemvalue="Python.data_exploration" />
-        <item itemvalue="Python.combined_approach" />
       </list>
     </recent_temporary>
   </component>
