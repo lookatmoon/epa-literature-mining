@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f634032-7df3-46e7-b21c-7f7e14cd7923" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/combined-approach/recall_for_df.py" beforeDir="false" afterPath="$PROJECT_DIR$/combined-approach/code/recall_for_df.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/combined-approach/recall_for_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/combined-approach/code/recall_for_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metric_learning/metric_learning_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/metric_learning/code/metric_learning_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metric_learning/metric_prep.py" beforeDir="false" afterPath="$PROJECT_DIR$/metric_learning/code/metric_prep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metric_learning/metric_scoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/metric_learning/code/metric_scoring.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-approach/graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/network-approach/code/graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-approach/network_based_LR.py" beforeDir="false" afterPath="$PROJECT_DIR$/network-approach/code/network_based_LR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text-approach/text_based_ensemble_ranker_score.csv" beforeDir="false" afterPath="$PROJECT_DIR$/text-approach/output_data/text_based_ensemble_ranker_score.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text-approach/text_based_simple_ranker_score.csv" beforeDir="false" afterPath="$PROJECT_DIR$/text-approach/output_data/text_based_simple_ranker_score.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +38,15 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.network_based_LR">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/combined-approach/code" />
+      <recent name="$PROJECT_DIR$/metric_learning/code" />
+      <recent name="$PROJECT_DIR$/network-approach/code" />
+      <recent name="$PROJECT_DIR$/text-approach/output_data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.combined_approach">
     <configuration name="combined_approach" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="epa-literature-mining" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -42,7 +59,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/combined-approach/combined_approach.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/combined-approach/data/combined_approach.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +101,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network-approach/network_based_LR.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network-approach/code/network_based_LR.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,10 +133,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.combined_approach" />
         <item itemvalue="Python.network_based_LR" />
         <item itemvalue="Python.text_based_simple_LR" />
         <item itemvalue="Python.data_exploration" />
-        <item itemvalue="Python.combined_approach" />
       </list>
     </recent_temporary>
   </component>
